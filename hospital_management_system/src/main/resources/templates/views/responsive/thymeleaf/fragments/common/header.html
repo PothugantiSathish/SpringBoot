@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/views/responsive/thymeleaf/fragments/common/head :: head"/>
+
+<body>
+
+<header th:fragment="header">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin-left: 80px;border-radius: 20px;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Yashoda ......Hospital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Add Appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hospital Services</a>
+        </li>  
+         <li class="nav-item">
+        <a class="nav-link" href="#"><img alt="Printer" src="images/printer.jpeg" style="width: 20px;border-radius: 10px;"></a>
+        </li>
+      
+       <li class="nav-item">
+        <a class="nav-link" href="#"><img alt="search" src="images/search.png" style="width: 20px;"></a>
+       </li>
+      
+       <li class="nav-item">
+        <a class="nav-link" href="#"><img alt="Refresh" src="images/refresh.jpg" style="width: 20px;border-radius: 20px;"></a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#"><img alt="Question_mark" src="images/question_mark.jpg"style="width: 20px;border-radius: 20px;">Help</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Patient Management</a>
+      </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+</header>
+
+</body>
+</html>

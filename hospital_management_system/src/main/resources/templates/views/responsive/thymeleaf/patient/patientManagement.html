@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/views/responsive/thymeleaf/fragments/common/head :: head"/>
+ 
+<body>
+<div th:replace="/views/responsive/thymeleaf/fragments/common/header :: header"/>
+
+<h4>Patient Details
+
+<label>
+      <input type="checkbox" id="old_patient" name="oldPatient">
+      <span>Old Patient</span>
+</label>
+<label>
+      <input type="checkbox" id="new_patient" name="NewPatient">
+      <span>New Patient</span>
+</label>  
+</h4>
+
+<!-- 1 -->
+<div class="first">
+<div class="firstflex">
+<form action="#" method="POST">
+  <select id="title" name="title">
+    <option value="Title" selected="selected">Title</option>
+    <option value="mr">Mr.</option>
+    <option value="mrs">Mrs.</option>
+    <option value="miss">Miss</option>
+    <option value="dr">Dr.</option>
+    <option value="prof">Prof.</option>
+  </select>
+</form>
+
+<form class="form1">
+  <input type="text" id="patientName" placeholder="New Patient Name" name="New Patient Name" />
+  <input type="text" id="patientName" placeholder="Last Name" name="Last Name"/>
+</form>
+
+<form>
+  <select id="gender" name="gender">
+    <option value="Gender"selected="selected">Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="others">Others</option>
+  </select>
+</form>
+  
+<form>
+    <!-- <label for="dob">Date of Birth:</label> -->
+    <input type="date" id="dob" name="dob">
+   
+</form>
+
+</div>
+
+<!--2  -->
+<div class="secondflex">
+<form class="form2">
+    <input id="date" type="text" placeholder="Years" name="Years"/>
+    <input id="date" type="text" placeholder="Months" name="Months"/>
+    <input id="date" type="text" placeholder="Days" name="Days"/>
+</form>
+
+<form>
+    <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" placeholder="Mobile No" required/>
+</form>
+
+<form>
+    <select id="nameType" name="nameType" onchange="showNameInput()">
+      <option value="Parent/Husband Name" selected="selected">Parent/Husband Name</option>
+       <option value="parent">Parent's Name</option>
+      <option value="husband">Husband's Name</option>
+    </select>
+    <div id="parentName" style="display: none;">
+      <label for="parentName">Parent's Name:</label>
+      <input type="text" id="parentName" name="parentName">
+    </div>
+    <div id="husbandName" style="display: none;">
+      <label for="husbandName">Husband's Name:</label>
+      <input type="text" id="husbandName" name="husbandName">
+    </div>
+    
+</form>
+
+  <script>
+    function showNameInput() {
+      var nameType = document.getElementById("nameType").value;
+      var parentNameDiv = document.getElementById("parentName");
+      var husbandNameDiv = document.getElementById("husbandName");
+
+      if (nameType === "parent") {
+        parentNameDiv.style.display = "block";
+        husbandNameDiv.style.display = "none";
+      } else if (nameType === "husband") {
+        parentNameDiv.style.display = "none";
+        husbandNameDiv.style.display = "block";
+      }
+    }
+  </script>
+
+<form>
+    <input type="text" id="parents" name="name" placeholder="Parent/Husband Name">
+</form>
+
+<form>
+  <select id="religion" name="religion">
+    <option value="Religion" selected="selected">Religion</option>
+    <option value="hinduism">Hinduism</option>
+    <option value="Muslim">Muslim</option>
+    <option value="christianity">Christianity</option>
+    <option value="islam">Islam</option> 
+    <option value="buddhism">Buddhism</option>
+    <option value="judaism">Judaism</option>
+  </select>
+</form>
+
+ 
+
+<form>
+    <select id="maritalStatus" name="maritalStatus">
+      <option value="Martial Status" selected="selected">Martial Status</option>
+      <option value="Married">Married</option>
+      <option value="Unmarried">Unmarried</option>
+    </select>
+</form>
+</div>
+
+<!--3  -->
+<div class="countries">
+   <form>
+    <select id="country" name="country">
+      <option value="country" selected="selected">Country</option>
+      <option value="IN">Indian</option>
+      <option value="USA">United States</option>
+      <option value="Canada">Canada</option>
+      <option value="UK">United Kingdom</option>
+      <!-- Add more countries as needed -->
+    </select>
+  </form>
+  
+  <form>
+    <select id="bloodGroup" name="bloodGroup">
+      <option value="bloodgroup" selected="selected">BloodGroup</option>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+    </select>
+  </form>
+  
+  <form>
+   <select id="occupation" name="occupation">
+      <option value="occupation">Select occupation</option>
+      <option value="Student">Student</option>
+      <option value="Farmer">Farmer</option>
+      <option value="Labour">Labour</option>
+      <option value="Engineer">Engineer</option>
+      <option value="Doctor">Doctor</option>
+      <option value="Teacher">Teacher</option>
+      <option value="Artist">Artist</option>
+      <option value="Business Owner">Business Owner</option>
+   </select>
+  </form>
+
+
+  <form>
+    <select id="state" name="state">
+      <option value="states" selected="selected">States</option>
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+      <option value="Assam">Assam</option>
+      <option value="Bihar">Bihar</option>
+      <option value="Chhattisgarh">Chhattisgarh</option>
+      <option value="Goa">Goa</option>
+      <option value="Gujarat">Gujarat</option>
+      <option value="Haryana">Haryana</option>
+      <option value="Himachal Pradesh">Himachal Pradesh</option>
+      <option value="Jharkhand">Jharkhand</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Manipur">Manipur</option>
+      <option value="Meghalaya">Meghalaya</option>
+      <option value="Mizoram">Mizoram</option>
+      <option value="Nagaland">Nagaland</option>
+      <option value="Odisha">Odisha</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Sikkim">Sikkim</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Telangana">Telangana</option>
+      <option value="Tripura">Tripura</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      <option value="Uttarakhand">Uttarakhand</option>
+      <option value="West Bengal">West Bengal</option>
+    </select>
+  </form>
+  
+  
+  <form>
+    <select id="city" name="city">
+      <option value="select_city" selected="selected">-Select City--</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Mahabubabad">Mahabubabad</option>
+      <option value="Warangal">Warangal</option>
+      <option value="Karimnagar">Karimnagar</option>
+      <option value="Nizamabad">Nizamabad</option>
+      <option value="Khammam">Khammam</option>
+    </select>
+  </form>
+  
+  <form>
+    <input type="text" id="vilage" name="Village" placeholder="Village"/>
+    <input type="text" id="district" name="District" placeholder="District">
+  </form>
+
+</div>
+
+<!--4  -->
+<div class="fourth">
+  <form>
+      <input type="text" id="address" value="address" placeholder="Address"> 
+  </form>
+  
+  <div class="id">
+  <form>
+     <select id="idProof">
+     <option value="idProof" selected="selected">Id Proof</option>
+     <option value="passport">Passport</option>
+     <option value="driverLicense">Driver's License</option>
+     <option value="voterId">Voter ID</option>
+     <option value="aadharCard">Aadhar Card</option>
+     </select>
+  </form>
+  
+  
+    <input type="text" id="idNumber" placeholder="Enter ID Number">
+    
+    <label>
+      <span>Receive SMS notifications:</span>
+      <input type="checkbox" id="smsNotification" name="smsNotification">
+    </label>
+    
+    <input type="text" id="health" name="Health" placeholder="Health Issue">
+    
+     <select id="referral-type" name="referral-type">
+        <option value="referral-type" selected="selected">Referral Type</option>
+        <option value="emergency">Emergency</option>
+        <option value="specialist">Specialist</option>
+        <option value="routine">Routine</option>
+        <option value="transplant">Transplant</option>
+    </select>
+    
+    
+   </div>
+   
+</div>
+
+<div class="organizations">
+   <select id="organization" name="organization">
+        <option value="organizations" selected="selected">Select Organizations</option>
+        <option value="admin">Administration</option>
+        <option value="nursing">Nursing</option>
+        <option value="finance">Finance</option>
+        <option value="hr">Human Resources</option>
+    </select>
+    
+    <select id="tariff" name="tariff">
+        <option value="patient_tariff">Patient Tariff</option>
+        <option value="standard">Standard</option>
+        <option value="premium">Premium</option>
+        <option value="deluxe">Deluxe</option>
+        <option value="vip">VIP</option>
+    </select>
+    
+    <div class="visit">
+    <span>VISIT TYPE:</span><span class="validity">REGISTRATION VALIDITY:</span>
+    </div>
+    <span class="consultant">CONSULTANT VALIDITY:</span>
+    
+</div>
+</div>
+
+<h4>Appointment Details:</h4>
+<div class="appointment_details">
+<div class="flex2">
+<form>
+   <select class="location">
+      <option value="location" selected="selected">Select Location</option>
+      <option value="hyderabad">Hyderabad</option>
+      <option value="nalgonda">Nalgonda</option>
+      <option value="warangal">Warangal</option>
+      <option value="khammam">Khammam</option>
+      <option value="mahabubabad">Mahabubabad</option>
+   </select>
+</form> 
+   <input type="date" id="Select_Date" name="Select Date" placeholder="Select Date">
+   <input type="text" id="token" name="token" placeholder="Token">
+   
+   <select id="consultant" name="consultant">
+   <option value="cosultant" selected="selected">Select Consultant</option>
+   <option value="dr-smith">Dr. Smith</option>
+   <option value="dr-jones">Dr. Jones</option>
+   <option value="dr-doe">Dr. Doe</option>
+   </select>
+   
+   <input type="text" id="code" name="doctor_code" placeholder="Doctor Code">
+   <input type="text" id="specilization" name="specilization" placeholder="Specilization">
+
+</div>
+</div>
+
+<h4>Fee Details:</h4>
+<div class="fee">
+<div class="details">
+    <form>
+        <label for="registration_fee">Registration Fee:</label>
+        <input type="text" id="registration_fee" name="registration_fee">
+
+        <label for="discount_percentage" style="margin-left: 40px;">Disc(%):</label>
+        <input type="text" id="discount_percentage" name="Fee" placeholder="Fee">
+
+        <label for="discount_amount" style="margin-left: 40px;">Disc($):</label>
+        <input type="text" id="discount_amount" name="discount_amount" placeholder="Fee">
+
+        <label for="final_amount" style="margin-left: 47px;"> Reg Final Amount:</label>
+        <input type="text" id="final_amount" name="final_amount" placeholder="Fee">
+    </form>
+    
+    <form style="margin-top: 20px;">
+        <label for="consultant_fee">Consultant Fee:</label>
+        <input type="text" id="consultant_fee" name="consultant_fee">
+
+        <label for="discount_percentage" style="margin-left: 40px;">Disc(%):</label>
+        <input type="text" id="discount_percentage" name="discount_percentage" placeholder="Fee">
+
+        <label for="discount_amount" style="margin-left: 40px;">Disc($):</label>
+        <input type="text" id="discount_amount" name="discount_amount" placeholder="Fee">
+
+        <label for="final_amount" style="margin-left: 45px;">Con Final Amount:</label>
+        <input type="text" id="final_amount" name="final_amount" placeholder="Fee">
+    </form>
+    
+    <form style="margin-top: 20px;">
+        <label for="total_fee">Total Amount:</label>
+        <input type="text" id="total_fee" name="total_fee" placeholder="Total Amount">
+
+        <label for="discount_percentage" style="margin-left: 40px;">Disc(%):</label>
+        <input type="text" id="discount_percentage" name="discount_percentage" placeholder="Total Disco">
+
+        <label for="discount_amount" style="margin-left: 40px;">Disc($):</label>
+        <input type="text" id="discount_amount" name="discount_amount" placeholder="Total Disco">
+
+        <label for="total_bill" style="margin-left: 45px;">Total Bill Amount:</label>
+        <input type="text" id="total_bill" name="total_bill" placeholder="Bill Amount">
+    </form>
+    
+     <form style="margin-top: 20px;">
+        <label for="amount_received">Amount Received:</label>
+        <input type="text" id="amount_received" name="amount_received" placeholder="Enter Amount">
+
+        <label for="change_given" style="margin-left: 61px;">Change_Given:</label>
+        <input type="text" id="change_given" name="change_given">
+
+        <label for="balance" style="margin-left: 61px;">Balance:</label>
+        <input type="text" id="balance" name="balance">
+
+        <label for="status" style="margin-left: 67px;">Status:</label>
+        <input type="text" id="status" name="status">
+     </form>
+</div>
+</div>
+
+<div th:replace="/views/responsive/thymeleaf/fragments/common/sidebar :: sidebar"/>	
+
+
+<div th:replace="/views/responsive/thymeleaf/fragments/common/footer :: footer"/>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+ @charset "UTF-8";
+h4{
+  color: green;
+  margin-left: 100px;
+}
+#old_patient{
+	 margin-left: 890px;
+}
+#new_patient{
+	 margin-left: 10px;
+}
+.first{
+	 border-style: groove; 
+	 background-color: rgb(173,216,230);
+	 width: 90%;
+	 margin-left: 100px;
+}
+.firstflex{
+	display: flex;
+	column-gap: 10px;
+	margin-left: 40px;
+	margin-top: 10px;
+}
+#title{
+	width: 170px;
+	height: 30px;
+	color: red;
+}
+.form1{
+	 display: flex;
+	 column-gap: 10px;
+}
+#patientName{
+	width: 350px;
+	color: red;
+}
+#gender{
+	width: 200px;
+	height: 30px;
+	color: red;
+}
+#dob{
+	width: 200px;
+}
+.secondflex{
+	display: flex;
+	column-gap: 10px; 
+	margin-top: 20px;
+	margin-left: 40px;
+}
+.form2{  
+	display: flex;
+	height: 30px;
+	column-gap: 10px;
+}
+#date{
+	width: 80px;
+}
+#mobileNumber{
+	width: 259px;
+}
+#nameType{
+	height: 30px;
+}
+#parents{
+	width: 156px;
+}
+#religion,#maritalStatus{
+	height: 30px;
+	width: 200px;
+}
+.countries{
+	display: flex; 
+	margin-top: 20px;
+	column-gap: 10px;
+	margin-left: 40px;
+}
+
+#country,#bloodGroup,#occupation,#state,#city{
+	width: 170px;
+	height: 30px;
+}
+#vilage{
+	width: 200px;
+	height: 30px;
+}
+#district{
+	width: 200px;
+	height: 30px;
+	margin-left: 6px;
+}
+.fourth{
+	display: flex;
+	margin-top: 30px;
+	column-gap: 10px;
+	margin-left: 40px;
+}
+#address{
+	width: 250px;
+	height: 80px;
+	margin-top: 20px;
+}
+.id{
+    display: flex; 
+    margin-top: 20px;
+    column-gap: 10px;
+}
+#idProof{
+	width: 180px;
+	height: 30px;
+}
+#idNumber{
+	width: 200px;
+	height: 30px;
+}
+#health{
+	width: 230px;
+	height: 30px;
+}
+#referral-type{
+	width: 200px;
+	height: 80px;
+}
+.organizations{
+	margin-left: 260px; 
+	margin-top: -30px;
+}
+#organization{
+	height: 30px;
+	width: 320px;
+	margin-left: 50px;
+}
+.visit{
+	margin-top: 40px;
+	margin-left: -220px;
+}
+.validity{
+	margin-left: 320px;
+}
+.consultant{
+	margin-left: -220px;
+}
+#tariff{
+	height: 30px;
+	width: 320px; 
+	margin-left: 50px;
+}
+.appointment_details{
+	border-style: groove; 
+	background-color: rgb(173,216,230);
+	width: 90%;
+	height: 50px;
+	margin-left: 100px;
+}
+.flex2{
+    display: flex;
+    column-gap: 10px;
+    margin-left: 40px;
+    margin-top: 5px;
+}
+.location,#Select_Date,#token,#consultant,#code,#specilization{
+    width: 210px;
+    height: 30px;
+}
+
+.fee{
+	border-style: groove; 
+	background-color: rgb(173,216,230);
+	width: 90%;
+	height: 200px;
+	margin-left: 100px;
+}
+.details{
+	margin-left:40px;
+	margin-top: 10px;
+}
+#registration_fee{
+	width: 200px;
+}
+#discount_percentage{
+	width: 200px;
+}
+#discount_amount{
+	width: 200px;
+}
+#final_amount{
+	width: 200px;
+}
+#consultant_fee{
+	margin-left:8px;
+	width: 200px;
+}
+#discount_percentage{
+    width: 200px;
+}
+#discount_amount{
+	width: 200px;
+}
+#final_amount{
+	width: 200px;
+}
+#total_fee{
+	margin-left: 18px;
+	width: 200px;
+}
+#discount_percentage{
+	width: 200px;
+}
+#discount_amount{
+	width: 200px;
+}
+#total_bill{
+	width: 200px;
+	margin-left: 6px;
+}
+
+
+ 

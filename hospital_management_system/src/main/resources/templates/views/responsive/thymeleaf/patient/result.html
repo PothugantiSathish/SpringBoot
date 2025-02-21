@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+
+ <tr>
+    <th>Gender</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Year</th>
+    <th>Month</th>
+    <th>Day</th>
+ </tr>
+ <tr th:each="i:${details}">
+    <td th:text="${i.gender}"></td>
+    <td th:text="${i.newPatientName}"></td>
+    <td th:text="${i.lastName}"></td>
+    <td th:text="${i.year}"></td>
+    <td th:text="${i.month}"></td>
+    <td th:text="${i.days}"></td>  
+ </tr>
+</table>
+</body>
+</html>

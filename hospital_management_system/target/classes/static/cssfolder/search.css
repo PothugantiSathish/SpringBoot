@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.search{
+	border: groove;
+	height: 130px;
+	background-color:  rgb(173,216,230);
+	width: 320px;
+	margin-left:90px;
+	margin-top: 10px; 
+}
+
+#FirstName,#lastName{
+	width: 140px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.search2{
+	display: flex;
+}
+#id,#submit{
+	width: 140px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+	
+
+	 

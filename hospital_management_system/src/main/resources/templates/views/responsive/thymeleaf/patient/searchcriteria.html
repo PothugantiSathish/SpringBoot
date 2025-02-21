@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${pageTitle}"></title>
+</head>
+<body>
+
+<form action="#" th:action="@{/search1/result}" th:object="${searchcriteria}" method="post">
+ 
+ <input type="text" th:name="patientContactNumber" placeholder="Contact Number"><br>
+ <input type="text" th:name="patientRegistrationNumber" placeholder="patient Registration Number"><br>
+ <input type="text" th:name="patientBillNumber" placeholder="patient Bill Number"><br>
+ <input type="submit" value="Search">
+</form> 
+
+<div th:if="${searchcriteria == null}"></div>
+<div th:unless="${searchcriteria == null}">
+<p th:text="${searchcriteria.patientContactNumber}"></p>
+<p th:text="${searchcriteria.patientRegistrationNumber}"></p>
+<p th:text="${searchcriteria.patientBillNumber}"></p>
+
+</div>
+
+
+</body>
+</html>

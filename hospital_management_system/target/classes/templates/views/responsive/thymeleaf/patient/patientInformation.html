@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="cssfolder/patientInformation.css">
+ 
+    
+</head>
+<body>
+
+ <div th:replace="/views/responsive/thymeleaf/fragments/common/header :: header"/> 
+ 
+ 
+<div class="container mt-3" style="margin-left: 130px;">
+  <h2>Patient Details</h2>
+ <form th:action="@{/newpatient}" th:object="${patient}" method="post">
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="btn" data-bs-toggle="collapse" href="#personal">
+          <strong>Personal Information</strong>
+        </a>
+      </div>
+      <div id="personal" class="collapse show" data-bs-parent="#accordion">
+        <div class="card-body">
+
+<h5 style="color: green;margin-bottom: -25px;">Patient Details</h5>
+
+<label>
+      <input type="radio" id="old_patient" name="oldPatient">
+      <span>Old Patient</span>
+</label>
+<label>
+      <input type="radio" id="new_patient" name="NewPatient">
+      <span>New Patient</span>
+</label>  
+
+
+
+<div class="tab-content"style="display: flex;">
+
+
+<!-- 1 -->
+<div class="first">
+<div class="firstflex">
+
+  <select th:field="*{title}" id="title" name="title">
+    <option value="Title" selected="selected">Title</option>
+    <option value="mr">Mr.</option>
+    <option value="mrs">Mrs.</option>
+    <option value="miss">Miss</option>
+    <option value="dr">Dr.</option>
+    <option value="prof">Prof.</option>
+  </select>
+
+
+
+  <select th:field="*{gender}" id="gender" name="gender">
+    <option value="Gender"selected="selected">Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="others">Others</option>
+  </select>
+
+
+</div>
+
+<div class="form1">
+
+  <input type="text" th:field="*{newPatientName}" id="newPatientName" placeholder="New Patient Name" name="New Patient Name"/>
+  <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name" name="Last Name"/>
+</div>
+
+<div class="form2">
+    <input type="date" th:field="*{date}" id="dob" name="dob">
+    <input th:field="*{year}" id="year" type="text" placeholder="Years" name="Years"/>
+    <input th:field="*{month}" id="month" type="text" placeholder="Months" name="Months"/>
+    <input th:field="*{days}" id="days" type="text" placeholder="Days" name="Days"/>
+</div>
+
+<div style="margin-top: 10px;">
+    <select id="nameType"  name="nameType">
+      <option value="Parent/Husband Name" selected="selected">Parent/Husband Name</option>
+       <option value="parent">Parent's Name</option>
+      <option value="husband">Husband's Name</option>
+    </select>
+    <input type="text" th:field="*{parentName}" id="parents" name="name" placeholder="Parent/Husband Name">
+</div>
+
+<div style="display: flex;">
+
+  <select th:field="*{religion}" id="religion" name="religion">
+    <option value="Religion" selected="selected">Religion</option>
+    <option value="hinduism">Hinduism</option>
+    <option value="Muslim">Muslim</option>
+    <option value="christianity">Christianity</option>
+    <option value="islam">Islam</option> 
+    <option value="buddhism">Buddhism</option>
+    <option value="judaism">Judaism</option>
+  </select>
+
+
+    <select th:field="*{martialStatus}" id="maritalStatus" name="maritalStatus">
+      <option value="Martial Status" selected="selected">Martial Status</option>
+      <option value="Married">Married</option>
+      <option value="Unmarried">Unmarried</option>
+    </select>
+
+</div>
+
+<div class="countries" style="display: flex;">
+   
+    <select th:field="*{country}" id="country" name="country">
+      <option value="country" selected="selected">Country</option>
+      <option value="IN">Indian</option>
+      <option value="USA">United States</option>
+      <option value="Canada">Canada</option>
+      <option value="UK">United Kingdom</option>
+
+    </select>
+ 
+  
+
+    <select th:field="*{bloodGroup}" id="bloodGroup" name="bloodGroup">
+      <option value="bloodgroup" selected="selected">BloodGroup</option>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+    </select>
+   
+
+</div>
+ 
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+        <strong>Contact Details</strong>
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+<h4 style="color: green;">Contact Details</h4>
+<div class="second">
+<div class="secondflex">
+   
+   <select th:field="*{occupation}" id="occupation" name="occupation">
+      <option value="occupation">Select occupation</option>
+      <option value="Student">Student</option>
+      <option value="Farmer">Farmer</option>
+      <option value="Labour">Labour</option>
+      <option value="Engineer">Engineer</option>
+      <option value="Doctor">Doctor</option>
+      <option value="Teacher">Teacher</option>
+      <option value="Artist">Artist</option>
+      <option value="Business Owner">Business Owner</option>
+   </select>
+ 
+
+
+  
+    <select th:field="*{state}" id="state" name="state">
+      <option value="states" selected="selected">States</option>
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+      <option value="Assam">Assam</option>
+      <option value="Bihar">Bihar</option>
+      <option value="Chhattisgarh">Chhattisgarh</option>
+      <option value="Goa">Goa</option>
+      <option value="Gujarat">Gujarat</option>
+      <option value="Haryana">Haryana</option>
+      <option value="Himachal Pradesh">Himachal Pradesh</option>
+      <option value="Jharkhand">Jharkhand</option>
+      <option value="Karnataka">Karnataka</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Manipur">Manipur</option>
+      <option value="Meghalaya">Meghalaya</option>
+      <option value="Mizoram">Mizoram</option>
+      <option value="Nagaland">Nagaland</option>
+      <option value="Odisha">Odisha</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Sikkim">Sikkim</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Telangana">Telangana</option>
+      <option value="Tripura">Tripura</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      <option value="Uttarakhand">Uttarakhand</option>
+      <option value="West Bengal">West Bengal</option>
+    </select>
+  
+  </div>
+  
+  <div>
+    <input type="text" th:field="*{village}" id="vilage" name="Village" placeholder="Village">
+    <input type="text" th:field="*{district}" id="district"  name="District" placeholder="District">
+  </div>
+  
+  <div style="display: flex;column-gap: 10px;">
+    <input type="text" th:field="*{address}" id="address" value="address" placeholder="Address"> 
+    <select th:field="*{city}" id="city" name="city">
+      <option value="select_city" selected="selected">-Select City--</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Mahabubabad">Mahabubabad</option>
+      <option value="Warangal">Warangal</option>
+      <option value="Karimnagar">Karimnagar</option>
+      <option value="Nizamabad">Nizamabad</option>
+      <option value="Khammam">Khammam</option>
+    </select>
+  </div>
+  
+  <div class="id" style="display: flex;column-gap: 10px;margin-top: 10px;">
+     <select th:field="*{idProof}" id="idProof">
+     <option value="idProof" selected="selected">Id Proof</option>
+     <option value="passport">Passport</option>
+     <option value="driverLicense">Driver's License</option>
+     <option value="voterId">Voter ID</option>
+     <option value="aadharCard">Aadhar Card</option>
+     </select>
+    <input type="text" th:field="*{idNumber}" id="idNumber" placeholder="Enter ID Number">
+  </div>
+  
+  <div style="margin-top: 10px;">
+   <input type="text" th:field="*{health}" id="health" name="Health" placeholder="Health Issue">
+    
+     <select th:field="*{referralType}" id="referral-type" name="referral-type">
+        <option value="referral-type" selected="selected">Referral Type</option>
+        <option value="emergency">Emergency</option>
+        <option value="specialist">Specialist</option>
+        <option value="routine">Routine</option>
+        <option value="transplant">Transplant</option>
+    </select>
+  </div>
+  
+  <div class="organizations">
+   <select id="organization" th:field="*{organization}" name="organization">
+        <option value="organizations" selected="selected">Select Organizations</option>
+        <option value="admin">Administration</option>
+        <option value="nursing">Nursing</option>
+        <option value="finance">Finance</option>
+        <option value="hr">Human Resources</option>
+    </select>
+    <select id="tariff" th:field="*{tariff}" name="tariff">
+        <option value="patient_tariff">Patient Tariff</option>
+        <option value="standard">Standard</option>
+        <option value="premium">Premium</option>
+        <option value="deluxe">Deluxe</option>
+        <option value="vip">VIP</option>
+    </select>
+
+   </div>
+</div>
+</div>
+       
+          </div>
+      </div>
+    </div>
+    
+    
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+         <strong>Appointment Details</strong>
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+        
+<h4 style="color: green;">Appointment Details:</h4>
+<div class="appointment_details">
+<div class="flex2">
+<div style="margin-top: 10px;margin-left: 10px;">
+   <select th:field="*{location}" class="location">
+      <option value="location" selected="selected">Select Location</option>
+      <option value="hyderabad">Hyderabad</option>
+      <option value="nalgonda">Nalgonda</option>
+      <option value="warangal">Warangal</option>
+      <option value="khammam">Khammam</option>
+      <option value="mahabubabad">Mahabubabad</option>
+   </select>
+   <input type="date" th:field="*{selectDate}"  id="Select_Date" name="Select Date" placeholder="Select Date">
+
+</div>
+
+<div style="margin-top: 10px;margin-left: 10px;">
+   <select th:field="*{consultant}"  id="consultant" name="consultant">
+   <option value="cosultant" selected="selected">Select Consultant</option>
+   <option value="dr-smith">Dr. Smith</option>
+   <option value="dr-jones">Dr. Jones</option>
+   <option value="dr-doe">Dr. Doe</option>
+   </select>
+   <input type="text" th:field="*{token}"  id="token" name="token" placeholder="Token">
+</div>
+
+<div style="margin-top: 10px;margin-left: 10px;">
+   <input type="text" th:field="*{code}"  id="code" name="doctor_code" placeholder="Doctor Code">
+   <input type="text" th:field="*{specilization}"  id="specilization" name="specilization" placeholder="Specilization">
+</div>
+<div style="margin-top: 10px;margin-left: 10px;">
+  <input type="text" th:field="*{contactNumber}" id="contact_number" placeholder="Contact Number">
+  <input type="text" th:field="*{registrationNumber}" id="registration_number" placeholder="patient Registration Number">
+</div>
+</div>
+
+    </div>
+        </div>
+        </div>
+    
+    
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefour">
+         <strong>Fee Details</strong>
+        </a>
+      </div>
+      <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+        <!-- 4th --> 
+    
+      <h4 style="color: green;">Fee Details</h4>
+      <div class="third">
+       <div style="margin-top: 10px;">
+        <label for="registration_fee" style="margin-left: 10px;">Registration Fee:</label>
+        <label for="discount_percentage" style="margin-left: 10px;">Disc(%):</label>
+        <label for="discount_amount" style="margin-left: 5px;">Disc($):</label>
+        <label for="final_amount" style="margin-left: 10px;">Amt:</label><br>
+        <input type="text" id="registration_fee" name="registration_fee"> 
+        <input type="text" id="discount_percentage" name="Fee" placeholder="Fee">
+        <input type="text" id="discount_amount" name="discount_amount" placeholder="Fee">
+        <input type="text" id="final_amount" name="final_amount" placeholder="Fee">
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <label for="consultant_fee" style="margin-left: 10px;">Consultant Fee:</label>
+        <label for="discount_percentage" style="margin-left: 18px;">Disc(%):</label>
+        <label for="discount_amount" style="margin-left: 5px;">Disc($):</label>
+        <label for="final_amount" style="margin-left: 10px;">Amt:</label>
+        <input type="text" id="consultant_fee" name="consultant_fee">
+        <input type="text" id="discount_percentage" name="discount_percentage" placeholder="Fee">
+        <input type="text" id="discount_amount" name="discount_amount" placeholder="Fee">
+        <input type="text" id="final_amount" name="final_amount" placeholder="Fee">
+    </div>
+    
+    <div style="margin-top: 20px;">
+        <label for="total_fee" style="margin-left: 10px;">Total Amount:</label>
+        <label for="discount_percentage" style="margin-left: 30px;">Disc(%):</label>
+        <label for="discount_amount" style="margin-left: 4px;">Disc($):</label>
+        <label for="total_bill" style="margin-left: 10px;">Amt:</label>
+        <input type="text" id="total_fee" name="total_fee" placeholder="Total Amount">
+        <input type="text" id="discount_percentage" name="discount_percentage" placeholder="Total Disco">
+        <input type="text" id="discount_amount" name="discount_amount" placeholder="Total Disco">
+        <input type="text" id="total_bill" name="total_bill" placeholder="Bill Amount">
+    </div>
+    
+     <div style="margin-top: 20px;">
+        <label for="amount_received" style="margin-left: 10px;">Amount Received:</label>
+        <label for="change_given" >Change</label>
+        <label for="balance" style="margin-left: 5px;">Balance:</label>
+        <label for="status" style="margin-left: 4px;">Status:</label>
+        <input type="text" id="amount_received" name="amount_received" placeholder="Enter Amount"> 
+        <input type="text" id="change_given" name="change_given">
+        <input type="text" id="balance" name="balance">
+        <input type="text" id="status" name="status">
+     </div>
+     
+      </div>
+    </div> 
+     
+</div>
+
+        </div>
+      </div>
+      <input type="submit" value="submit">
+     </form>
+    </div>
+ 
+ <div th:replace="/views/responsive/thymeleaf/fragments/common/sidebar :: sidebar"/> 
+
+ 
+
+</body>
+</html>

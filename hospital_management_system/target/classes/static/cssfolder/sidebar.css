@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.sidebar{
+	background-color: white;
+	width: 24px;
+	position: fixed;
+	margin-top: 5px;
+}
+.bar{
+	border-style: groove;
+	width: 60px;
+	background-color: black;
+	
+	border-radius: 10px;
+}
+.chair{
+    width: 30px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    margin-left: 13px;
+}
+.lab{
+	width: 30px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    margin-left: 13px;
+}
+.globe{
+	width: 30px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    margin-left: 13px;
+}
+.bed{
+	width: 30px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    margin-left: 13px;
+}
+.plus{
+	width: 30px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    margin-left: 13px;
+}
+.card{
+	width: 30px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    margin-left: 13px;
+}
+.book{
+	width: 30px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    margin-left: 13px;
+}
+.contact{
+	width: 30px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    margin-left: 13px;
+}
+.document{
+	width: 30px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    margin-left: 13px;
+}
+.lock{
+	width: 30px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    margin-left: 13px;
+}
+.calender{
+	width: 30px;
+    border-radius: 20px;
+    margin-top: 30px; 
+    margin-left: 13px;
+}
